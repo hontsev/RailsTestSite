@@ -1,0 +1,19 @@
+<h1>A Greetings for You!</h1>
+<p><%=@message %></p>
+<p>Now is <span id='time'></span></p>
+<a class='btn btn-success' href="/greetings/goodbye">Good Bye!</a>
+
+
+<script>
+
+function updateTime(){
+    var d = new Date();
+    var str = d.getFullYear()+"-"+(d.getMonth()+1)+"-"+d.getDate()+" "+d.getHours()+":"+d.getMinutes()+":"+d.getSeconds();
+    $("#time").html(str);
+}
+
+$(function(){
+    updateTime();
+})
+
+</script>
