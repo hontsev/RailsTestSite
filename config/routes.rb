@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :high_scores
   get 'greetings/hello'
   get 'greetings/goodbye'
   # The priority is based upon order of creation: first created -> highest priority.
