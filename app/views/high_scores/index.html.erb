@@ -2,7 +2,7 @@
 
 <h1>Listing High Scores</h1>
 
-<table>
+<table class="table table-hover">
   <thead>
     <tr>
       <th>Game</th>
@@ -16,9 +16,9 @@
       <tr>
         <td><%= high_score.game %></td>
         <td><%= high_score.score %></td>
-        <td><%= link_to 'Show', high_score %></td>
-        <td><%= link_to 'Edit', edit_high_score_path(high_score) %></td>
-        <td><%= link_to 'Destroy', high_score, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Show', high_score , :class =>"btn btn-default"%></td>
+        <td><%= link_to 'Edit', edit_high_score_path(high_score), :class =>"btn btn-primary" %></td>
+        <td><%= link_to 'Destroy', high_score, method: :delete,data: { confirm: 'Are you sure?' } ,:class =>"btn btn-danger"%></td>
       </tr>
     <% end %>
   </tbody>
@@ -26,4 +26,4 @@
 
 <br>
 
-<%= link_to 'New High score', new_high_score_path %>
+<%= link_to 'New High score', new_high_score_path, :class =>"btn btn-success" %>
